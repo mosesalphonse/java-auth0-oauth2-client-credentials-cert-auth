@@ -17,9 +17,9 @@ import java.util.Base64;
 public class Auth0Client {
 
     // Define Auth0 credentials
-    private static final String CLIENT_ID = "ZnO04YX7BAXZ4RRo3b6u6SpjwivUDhUT"; // replace with your Auth0 client id
-    private static final String CLIENT_SECRET = "us7XhlEq2dUvSGh7amrp2cLcD60s3AGHeRztY3ELhESZefzbW6zrfxm_KNboUENf"; // replace with your Auth0 client secret
-    private static final String AUTH0_DOMAIN = "https://dev-ij5haa1w867a436p.us.auth0.com"; // replace with your Auth0 domain (e.g., https://dev-abc.auth0.com)
+    private static final String CLIENT_ID = ""; // replace with your Auth0 client id
+    private static final String CLIENT_SECRET = ""; // replace with your Auth0 client secret
+    private static final String AUTH0_DOMAIN = "https://"; // replace with your Auth0 domain (e.g., https://dev-abc.auth0.com)
     private static final String CERT_PATH = "src/main/resources/private.key"; // Path to your .key private key
 
     public static void main(String[] args) {
@@ -31,7 +31,7 @@ public class Auth0Client {
             String tokenUrl = AUTH0_DOMAIN + "/oauth/token";
             String requestBody = "grant_type=client_credentials&client_id=" + CLIENT_ID +
                     "&client_secret=" + CLIENT_SECRET +
-                    "&audience=" + "moses"; // Replace with your API identifier (optional)
+                    "&audience=" + ""; // Replace with your API identifier (optional)
 
             // Make the POST request to Auth0 to obtain the access token
             String accessToken = getAccessToken(tokenUrl, requestBody, privateKey);
